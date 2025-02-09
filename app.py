@@ -8,7 +8,8 @@ app = Flask(__name__)
 # Serve the index.html file from the current directory
 @app.route('/')
 def index():
-    return send_from_directory(os.getcwd(), 'index.html')
+    # return send_from_directory(os.getcwd(), 'index.html')
+    return render_template('index.html')  
 
 @app.route('/run-python', methods=['POST'])
 def run_python():
